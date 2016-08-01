@@ -85,7 +85,7 @@ def classify(testData, weight):
     m = len(h)
     resultList = {}
     for i in xrange(m):
-        if int(h[i][0]) > 0.5:
+        if int(h[i]) > 0.5:
             resultList[i] = 1
         else:
             resultList[i] = 0
@@ -109,7 +109,6 @@ def writeFile(finalResult):
 def digitRecognizer(alpha=0.07, maxCycles=10):
     trainData, trainLabel = loadTrainData()
     testData = loadTestData()
-    m, n = shape(testData)
     finalResult = {}
     for i in xrange(10):
         newLable = classLable(trainLabel, i)
