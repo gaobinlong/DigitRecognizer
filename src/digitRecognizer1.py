@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 
+# try first
+
 import csv
 import numpy
 import sys
@@ -72,3 +74,7 @@ def cal_distance(record):
     for j in range(0, PIXEL_LENGTH):
         imagePixel[j] = (imagePixel[j] * oldlen + record[j]) / (newlen)
     return index
+
+if __name__ == '__main__':
+    handleData.handle_train_data()
+    handleData.handle_test_data()

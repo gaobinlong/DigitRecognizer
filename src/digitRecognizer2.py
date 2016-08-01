@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-
+# use knn algorithm
 from numpy import *
 import operator
 import sys
@@ -14,10 +14,8 @@ def loadTrainData():
             l.append(line)  # 42001*785
     l.remove(l[0])
     l = array(l)
-    print l
     label = l[:, 0]
     data = l[:, 1:]
-    print toInt(label)
     return normizing(toInt(data)), toInt(label)
 
 
